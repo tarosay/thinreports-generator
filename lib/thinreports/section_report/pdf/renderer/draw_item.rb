@@ -58,6 +58,8 @@ module Thinreports
             end
           elsif shape.type_of?(Core::Shape::StackView::TYPE_NAME)
             stack_view_renderer.render(shape)
+          elsif shape.type_of?(Core::Shape::Table::TYPE_NAME)
+            table_renderer.render(shape)
           else
             raise Thinreports::Errors::UnknownShapeType
           end

@@ -1,0 +1,615 @@
+{
+  "schema-version": "1.0",
+  "last-modified-by": "table-feature-script",
+  "title": "Table",
+  "report": {
+    "orientation": "portrait",
+    "paper-type": "A4",
+    "width": 0,
+    "height": 0,
+    "margin": [
+      30,
+      40,
+      30,
+      40
+    ]
+  },
+  "sections": [
+    {
+      "id": "main",
+      "type": "detail",
+      "height": 140,
+      "display": true,
+      "auto-stretch": true,
+      "every-page": false,
+      "items": [
+        {
+          "type": "text",
+          "id": "",
+          "x": 0,
+          "y": 0,
+          "width": 510,
+          "height": 28,
+          "description": "",
+          "display": true,
+          "follow-stretch": "none",
+          "texts": [
+            "注文明細"
+          ],
+          "style": {
+            "font-family": [
+              "IPAGothic"
+            ],
+            "color": "#000000",
+            "font-style": [
+              "bold"
+            ],
+            "text-align": "left",
+            "vertical-align": "top",
+            "letter-spacing": "",
+            "font-size": 20,
+            "line-height-ratio": "",
+            "line-height": ""
+          },
+          "affect-bottom-margin": true
+        },
+        {
+          "type": "table",
+          "id": "items",
+          "x": 0,
+          "y": 40,
+          "width": 510,
+          "height": 92,
+          "description": "",
+          "display": true,
+          "follow-stretch": "none",
+          "affect-bottom-margin": true,
+          "style": {
+            "border-width": 0.5,
+            "border-color": "#333333",
+            "border-style": "solid"
+          },
+          "columns": [
+            {
+              "id": "name",
+              "width": 180
+            },
+            {
+              "id": "qty",
+              "width": 60
+            },
+            {
+              "id": "price",
+              "width": 90
+            },
+            {
+              "id": "note",
+              "width": 180
+            }
+          ],
+          "rows": [
+            {
+              "id": "head1",
+              "type": "header",
+              "height": 22,
+              "auto-stretch": false,
+              "cells": [
+                {
+                  "column-id": "name",
+                  "col-span": 1,
+                  "row-span": 2,
+                  "display": true,
+                  "style": {
+                    "padding": [
+                      1,
+                      4,
+                      1,
+                      4
+                    ],
+                    "background-color": "#dfe6ee"
+                  },
+                  "content": {
+                    "type": "text",
+                    "id": "",
+                    "description": "",
+                    "display": true,
+                    "follow-stretch": "none",
+                    "texts": [
+                      "商品名"
+                    ],
+                    "style": {
+                      "font-family": [
+                        "IPAGothic"
+                      ],
+                      "color": "#000000",
+                      "font-style": [
+                        "bold"
+                      ],
+                      "text-align": "center",
+                      "vertical-align": "middle",
+                      "letter-spacing": "",
+                      "font-size": 10,
+                      "line-height-ratio": "",
+                      "line-height": ""
+                    },
+                    "affect-bottom-margin": true
+                  }
+                },
+                {
+                  "column-id": "qty",
+                  "col-span": 2,
+                  "row-span": 1,
+                  "display": true,
+                  "style": {
+                    "padding": [
+                      1,
+                      4,
+                      1,
+                      4
+                    ],
+                    "background-color": "#dfe6ee"
+                  },
+                  "content": {
+                    "type": "text",
+                    "id": "",
+                    "description": "",
+                    "display": true,
+                    "follow-stretch": "none",
+                    "texts": [
+                      "金額"
+                    ],
+                    "style": {
+                      "font-family": [
+                        "IPAGothic"
+                      ],
+                      "color": "#000000",
+                      "font-style": [
+                        "bold"
+                      ],
+                      "text-align": "center",
+                      "vertical-align": "middle",
+                      "letter-spacing": "",
+                      "font-size": 10,
+                      "line-height-ratio": "",
+                      "line-height": ""
+                    },
+                    "affect-bottom-margin": true
+                  }
+                },
+                {
+                  "column-id": "note",
+                  "col-span": 1,
+                  "row-span": 2,
+                  "display": true,
+                  "style": {
+                    "padding": [
+                      1,
+                      4,
+                      1,
+                      4
+                    ],
+                    "background-color": "#dfe6ee"
+                  },
+                  "content": {
+                    "type": "text",
+                    "id": "",
+                    "description": "",
+                    "display": true,
+                    "follow-stretch": "none",
+                    "texts": [
+                      "備考"
+                    ],
+                    "style": {
+                      "font-family": [
+                        "IPAGothic"
+                      ],
+                      "color": "#000000",
+                      "font-style": [
+                        "bold"
+                      ],
+                      "text-align": "center",
+                      "vertical-align": "middle",
+                      "letter-spacing": "",
+                      "font-size": 10,
+                      "line-height-ratio": "",
+                      "line-height": ""
+                    },
+                    "affect-bottom-margin": true
+                  }
+                }
+              ]
+            },
+            {
+              "id": "head2",
+              "type": "header",
+              "height": 22,
+              "auto-stretch": false,
+              "cells": [
+                {
+                  "column-id": "qty",
+                  "col-span": 1,
+                  "row-span": 1,
+                  "display": true,
+                  "style": {
+                    "padding": [
+                      1,
+                      4,
+                      1,
+                      4
+                    ],
+                    "background-color": "#dfe6ee"
+                  },
+                  "content": {
+                    "type": "text",
+                    "id": "",
+                    "description": "",
+                    "display": true,
+                    "follow-stretch": "none",
+                    "texts": [
+                      "数量"
+                    ],
+                    "style": {
+                      "font-family": [
+                        "IPAGothic"
+                      ],
+                      "color": "#000000",
+                      "font-style": [
+                        "bold"
+                      ],
+                      "text-align": "center",
+                      "vertical-align": "middle",
+                      "letter-spacing": "",
+                      "font-size": 10,
+                      "line-height-ratio": "",
+                      "line-height": ""
+                    },
+                    "affect-bottom-margin": true
+                  }
+                },
+                {
+                  "column-id": "price",
+                  "col-span": 1,
+                  "row-span": 1,
+                  "display": true,
+                  "style": {
+                    "padding": [
+                      1,
+                      4,
+                      1,
+                      4
+                    ],
+                    "background-color": "#dfe6ee"
+                  },
+                  "content": {
+                    "type": "text",
+                    "id": "",
+                    "description": "",
+                    "display": true,
+                    "follow-stretch": "none",
+                    "texts": [
+                      "単価"
+                    ],
+                    "style": {
+                      "font-family": [
+                        "IPAGothic"
+                      ],
+                      "color": "#000000",
+                      "font-style": [
+                        "bold"
+                      ],
+                      "text-align": "center",
+                      "vertical-align": "middle",
+                      "letter-spacing": "",
+                      "font-size": 10,
+                      "line-height-ratio": "",
+                      "line-height": ""
+                    },
+                    "affect-bottom-margin": true
+                  }
+                }
+              ]
+            },
+            {
+              "id": "detail",
+              "type": "body",
+              "height": 24,
+              "auto-stretch": true,
+              "cells": [
+                {
+                  "column-id": "name",
+                  "col-span": 1,
+                  "row-span": 1,
+                  "display": true,
+                  "style": {
+                    "padding": [
+                      1,
+                      4,
+                      1,
+                      4
+                    ]
+                  },
+                  "content": {
+                    "type": "text-block",
+                    "id": "name",
+                    "description": "",
+                    "reference-id": "",
+                    "value": "",
+                    "multiple-line": false,
+                    "display": true,
+                    "format": {
+                      "base": "",
+                      "type": ""
+                    },
+                    "follow-stretch": "none",
+                    "style": {
+                      "font-family": [
+                        "IPAGothic"
+                      ],
+                      "color": "#000000",
+                      "font-style": [],
+                      "text-align": "left",
+                      "vertical-align": "middle",
+                      "letter-spacing": "",
+                      "font-size": 10,
+                      "line-height-ratio": "",
+                      "line-height": "",
+                      "overflow": "truncate",
+                      "word-wrap": "break-word"
+                    },
+                    "affect-bottom-margin": true
+                  }
+                },
+                {
+                  "column-id": "qty",
+                  "col-span": 1,
+                  "row-span": 1,
+                  "display": true,
+                  "style": {
+                    "padding": [
+                      1,
+                      4,
+                      1,
+                      4
+                    ]
+                  },
+                  "content": {
+                    "type": "text-block",
+                    "id": "qty",
+                    "description": "",
+                    "reference-id": "",
+                    "value": "",
+                    "multiple-line": false,
+                    "display": true,
+                    "format": {
+                      "base": "",
+                      "type": ""
+                    },
+                    "follow-stretch": "none",
+                    "style": {
+                      "font-family": [
+                        "IPAGothic"
+                      ],
+                      "color": "#000000",
+                      "font-style": [],
+                      "text-align": "right",
+                      "vertical-align": "middle",
+                      "letter-spacing": "",
+                      "font-size": 10,
+                      "line-height-ratio": "",
+                      "line-height": "",
+                      "overflow": "truncate",
+                      "word-wrap": "break-word"
+                    },
+                    "affect-bottom-margin": true
+                  }
+                },
+                {
+                  "column-id": "price",
+                  "col-span": 1,
+                  "row-span": 1,
+                  "display": true,
+                  "style": {
+                    "padding": [
+                      1,
+                      4,
+                      1,
+                      4
+                    ]
+                  },
+                  "content": {
+                    "type": "text-block",
+                    "id": "price",
+                    "description": "",
+                    "reference-id": "",
+                    "value": "",
+                    "multiple-line": false,
+                    "display": true,
+                    "format": {
+                      "base": "",
+                      "type": ""
+                    },
+                    "follow-stretch": "none",
+                    "style": {
+                      "font-family": [
+                        "IPAGothic"
+                      ],
+                      "color": "#000000",
+                      "font-style": [],
+                      "text-align": "right",
+                      "vertical-align": "middle",
+                      "letter-spacing": "",
+                      "font-size": 10,
+                      "line-height-ratio": "",
+                      "line-height": "",
+                      "overflow": "truncate",
+                      "word-wrap": "break-word"
+                    },
+                    "affect-bottom-margin": true
+                  }
+                },
+                {
+                  "column-id": "note",
+                  "col-span": 1,
+                  "row-span": 1,
+                  "display": true,
+                  "style": {
+                    "padding": [
+                      1,
+                      4,
+                      1,
+                      4
+                    ]
+                  },
+                  "content": {
+                    "type": "text-block",
+                    "id": "note",
+                    "description": "",
+                    "reference-id": "",
+                    "value": "",
+                    "multiple-line": true,
+                    "display": true,
+                    "format": {
+                      "base": "",
+                      "type": ""
+                    },
+                    "follow-stretch": "none",
+                    "style": {
+                      "font-family": [
+                        "IPAGothic"
+                      ],
+                      "color": "#000000",
+                      "font-style": [],
+                      "text-align": "left",
+                      "vertical-align": "top",
+                      "letter-spacing": "",
+                      "font-size": 10,
+                      "line-height-ratio": "",
+                      "line-height": "",
+                      "overflow": "expand",
+                      "word-wrap": "break-word"
+                    },
+                    "affect-bottom-margin": true
+                  }
+                }
+              ]
+            },
+            {
+              "id": "total",
+              "type": "footer",
+              "height": 24,
+              "auto-stretch": false,
+              "cells": [
+                {
+                  "column-id": "name",
+                  "col-span": 2,
+                  "row-span": 1,
+                  "display": true,
+                  "style": {
+                    "padding": [
+                      1,
+                      4,
+                      1,
+                      4
+                    ],
+                    "background-color": "#f2f2f2"
+                  },
+                  "content": {
+                    "type": "text",
+                    "id": "",
+                    "description": "",
+                    "display": true,
+                    "follow-stretch": "none",
+                    "texts": [
+                      "合計"
+                    ],
+                    "style": {
+                      "font-family": [
+                        "IPAGothic"
+                      ],
+                      "color": "#000000",
+                      "font-style": [
+                        "bold"
+                      ],
+                      "text-align": "right",
+                      "vertical-align": "middle",
+                      "letter-spacing": "",
+                      "font-size": 10,
+                      "line-height-ratio": "",
+                      "line-height": ""
+                    },
+                    "affect-bottom-margin": true
+                  }
+                },
+                {
+                  "column-id": "price",
+                  "col-span": 1,
+                  "row-span": 1,
+                  "display": true,
+                  "style": {
+                    "padding": [
+                      1,
+                      4,
+                      1,
+                      4
+                    ],
+                    "background-color": "#f2f2f2"
+                  },
+                  "content": {
+                    "type": "text-block",
+                    "id": "total_price",
+                    "description": "",
+                    "reference-id": "",
+                    "value": "",
+                    "multiple-line": false,
+                    "display": true,
+                    "format": {
+                      "base": "",
+                      "type": ""
+                    },
+                    "follow-stretch": "none",
+                    "style": {
+                      "font-family": [
+                        "IPAGothic"
+                      ],
+                      "color": "#000000",
+                      "font-style": [
+                        "bold"
+                      ],
+                      "text-align": "right",
+                      "vertical-align": "middle",
+                      "letter-spacing": "",
+                      "font-size": 10,
+                      "line-height-ratio": "",
+                      "line-height": "",
+                      "overflow": "truncate",
+                      "word-wrap": "break-word"
+                    },
+                    "affect-bottom-margin": true
+                  }
+                },
+                {
+                  "column-id": "note",
+                  "col-span": 1,
+                  "row-span": 1,
+                  "display": true,
+                  "style": {
+                    "padding": [
+                      1,
+                      4,
+                      1,
+                      4
+                    ],
+                    "background-pattern": "forward-diagonal",
+                    "background-pattern-color": "#9aa7b4",
+                    "background-pattern-spacing": 3,
+                    "background-pattern-width": 0.4
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

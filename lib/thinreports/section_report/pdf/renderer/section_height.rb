@@ -34,6 +34,8 @@ module Thinreports
             text_layout(section, shape)
           elsif shape.type_of?(Core::Shape::StackView::TYPE_NAME)
             stack_view_layout(section, shape)
+          elsif shape.type_of?(Core::Shape::Table::TYPE_NAME)
+            table_layout(section, shape)
           elsif shape.type_of?(Core::Shape::ImageBlock::TYPE_NAME)
             image_block_layout(section, shape)
           elsif shape.type_of?('ellipse')
@@ -85,6 +87,13 @@ module Thinreports
           end
 
           LayoutInfo.new(shape, content_height, y, section.schema.height - schema_height - y)
+        end
+
+        def table_layout(section, shape)
+          schema_height = shape.format.total_height
+          y = shape.format.attributes['y']
+
+          LayoutInfo.new(shape, table_renderer.section_height(shape), y, section.schema.height - schema_height - y)
         end
 
         def stack_view_layout(section, shape)

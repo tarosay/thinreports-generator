@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'stack_view_builder'
+require_relative 'table_builder'
 
 module Thinreports
   module SectionReport
@@ -20,8 +21,11 @@ module Thinreports
           item.value(params[:value]) if params.key?(:value)
           item.styles(params[:styles]) if params.key?(:styles)
 
-          if item.internal.format.attributes['type'] == Core::Shape::StackView::TYPE_NAME
+          case item.internal.format.attributes['type']
+          when Core::Shape::StackView::TYPE_NAME
             StackViewBuilder.new(item).update(params)
+          when Core::Shape::Table::TYPE_NAME
+            TableBuilder.new(item).update(params)
           end
 
           item

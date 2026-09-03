@@ -2,6 +2,7 @@
 
 require_relative 'section_height'
 require_relative 'draw_item'
+require_relative 'table_renderer'
 
 module Thinreports
   module SectionReport
@@ -30,7 +31,11 @@ module Thinreports
         attr_reader :pdf
 
         def stack_view_renderer
-          raise Thinreports::Errors::InvalidLayoutFormat, 'nested StackView does not supported'
+          raise Thinreports::BasicReport::Errors::InvalidLayoutFormat, 'nested StackView does not supported'
+        end
+
+        def table_renderer
+          @table_renderer ||= Renderer::TableRenderer.new(pdf)
         end
       end
     end

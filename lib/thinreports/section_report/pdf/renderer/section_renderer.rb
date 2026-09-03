@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'stack_view_renderer'
+require_relative 'table_renderer'
 require_relative 'section_height'
 require_relative 'draw_item'
 
@@ -32,6 +33,10 @@ module Thinreports
 
         def stack_view_renderer
           @stack_view_renderer ||= Renderer::StackViewRenderer.new(pdf)
+        end
+
+        def table_renderer
+          @table_renderer ||= Renderer::TableRenderer.new(pdf)
         end
       end
     end

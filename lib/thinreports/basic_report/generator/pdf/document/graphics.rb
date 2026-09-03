@@ -38,5 +38,6 @@ end
 
 require_relative 'graphics/attributes'
 require_relative 'graphics/basic'
+require_relative 'graphics/hatch'
 require_relative 'graphics/image'
 require_relative 'graphics/text'
